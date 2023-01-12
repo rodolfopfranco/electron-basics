@@ -20,15 +20,16 @@
     </round-progress>
 
   </div>
+
   <div class = "controls-wraper">
-    <div *ngIf="isFinished">
+    <div>
       <label>Seconds</label>
-      <input type="text"
+      <input class="input" placeholder="seconds" type="text"
       [(ngModel)]="max"
       (keydown)="reset()">
     </div>
 
-    <button *ngIf="currentVal <=0" (click)="start()">Start</button>
-    <button *ngIf="!isFinished" (click)="finish()"></button>
+    <button class="button is-info" *ngIf="currentVal <=0" (click)="start()">Start</button>
+    <button class="button is-danger" *ngIf="!isFinished" (click)="finish()">Finish</button>
   </div>
 </main>
