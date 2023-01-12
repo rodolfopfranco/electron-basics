@@ -4,16 +4,16 @@ let win;
 // WINDOW CONFIGURATION:
 
 function createWindow(){
-    this.win = new BrowserWindow(
+    win = new BrowserWindow(
         {
-            width: 600,
+            width: 600, 
             height: 600,
-            backgroundColor: '#fffff',
+            backgroundColor: '#ffffff',
             icon: `file://${__dirname}/dist/assets/logo.png`
         }
     )
 
-    win.loadURL(`file://${__dirname}/dist/index.html`)
+    win.loadURL(`file://${__dirname}/dist/app-teste/index.html`)
     // for debug use enable this:
     // win.webContents.openDevTools()
     win.on('closed', function() {
